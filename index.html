@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Pellegrini</title>
+    <style>
+        /* Fullscreen white background */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: white;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+
+        .left, .center, .right {
+            margin: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            animation: spin 15s linear infinite, fallDown 10s linear;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(540deg); }
+        }
+
+        @keyframes fallDown {
+            0% { top: -400px; }
+            100% { top: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="left"><a href="bio.html">Simon Pellegrini</a></div>
+        <div class="center"><a href="Selected Works.pdf">Selected Works</a></div>
+        <div class="right"><a href="Contacts.html">Contacts</a></div>
+    </div>
+    <div class="container">
+        <img src="assets/casettina.png" alt="Floating Casettina" class="floating-image">
+    </div>
+</body>
+</html>
